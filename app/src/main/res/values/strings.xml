@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Weather Online</string>
+    <string name="todo">TODO</string>
+    <string name="search">search</string>
+    <string name="description">Description</string>
+    <string name="temperature">Temperature</string>
+    <string name="pressure">pressure</string>
+    <string name="wind">wind</string>
+    <string name="windAngle">windAngle</string>
+    <string name="windGusts">windGusts</string>
+    <string name="windSpeed">windSpeed</string>
+    <string name="humidity">humidity</string>
+    <string name="cloudiness">cloudiness</string>
+    <string name="icon">icon</string>
+</resources>
