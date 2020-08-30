@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     CardView mCardViewWeather;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
                     apiKey(String.valueOf(mSearchField.getText()));
                     mSearchField.setText("");
                 }else {
-                    Toast.makeText(MainActivity.this,"Please choose a City",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,"Please write a name of  City first",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -109,13 +108,13 @@ public class MainActivity extends AppCompatActivity {
                 public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                     String responseData= response.body().string();
                     try {
-                        JSONObject json= new JSONObject(responseData);
-                        JSONArray array=json.getJSONArray("weather");
-                        JSONObject object= array.getJSONObject(0);
+                        JSONObject json = new JSONObject(responseData);
+                        JSONArray array = json.getJSONArray("weather");
+                        JSONObject object = array.getJSONObject(0);
 
-                        String description=object.getString("description");
-                        String icons =object.getString("icon");
-                        JSONObject templ= json.getJSONObject("main");
+                        String description = object.getString("description");
+                        String icons = object.getString("icon");
+                        JSONObject templ = json.getJSONObject("main");
                         Double Temperature= templ.getDouble("temp");
                         Double press = templ.getDouble("pressure");
                         Double hum = templ.getDouble("humidity");
